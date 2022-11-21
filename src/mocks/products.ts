@@ -1,0 +1,83 @@
+export const products = [
+  {
+    _id: '637ac72ac4ffb95364c88b0a',
+    name: 'Cerveja',
+    description: 'cerva  geladinha',
+    imagePath: '1668990761993-cerveja.png',
+    price: 40,
+    ingredients: [],
+    category: '637ac61dc4ffb95364c88b03',
+  },
+  {
+    _id: '637ac97dc4ffb95364c88b0e',
+    name: 'Pizza de frango',
+    description: 'pizza de frango gostosa demais',
+    imagePath: '1668991357959-frango-catupiry.png',
+    price: 50,
+    ingredients: [],
+    category: '637ac603c4ffb95364c88b01',
+  },
+  {
+    _id: '637ac98bc4ffb95364c88b10',
+    name: 'Pizza de frango',
+    description: 'pizza de frango gostosa demais',
+    imagePath: '1668991371041-frango-catupiry.png',
+    price: 50,
+    ingredients: [],
+    category: '637ac603c4ffb95364c88b01',
+  },
+  {
+    _id: '637ac9b7c4ffb95364c88b12',
+    name: 'Pizza de frango',
+    description: 'pizza de frango gostosa demais',
+    imagePath: '1668991415749-frango-catupiry.png',
+    price: 50,
+    ingredients: [
+      {
+        name: 'frango com catupiry',
+        icon: '🍕',
+        _id: '637ac9b7c4ffb95364c88b13',
+      },
+    ],
+    category: '637ac603c4ffb95364c88b01',
+  },
+  {
+    _id: '637acb1fc4ffb95364c88b19',
+    name: 'Margerita',
+    description: 'Pizza de marguerita muito gostosa',
+    imagePath: '1668991775894-marguerita.png',
+    price: 50,
+    ingredients: [
+      {
+        name: 'Pizza de  margerita com calabresa extra',
+        icon: '🍕',
+        _id: '637acb1fc4ffb95364c88b1a',
+      },
+    ],
+    category: '637ac603c4ffb95364c88b01',
+  },
+  {
+    _id: '637ad31cc4ffb95364c88b29',
+    name: 'Suco de laranja',
+    description: 'Suco  com gelo muito  gostoso',
+    imagePath: '1668993820721-suco-de-laranja.png',
+    price: 10,
+    ingredients: [
+      {
+        name: 'Pizza de  margerita com calabresa extra',
+        icon: '🍕',
+        _id: '637ad31cc4ffb95364c88b2a',
+      },
+    ],
+    category: '637ac61dc4ffb95364c88b03',
+  },
+  {
+    _id: '637ad32ac4ffb95364c88b2c',
+    name: 'Suco de laranja',
+    description: 'Suco  com gelo muito  gostoso',
+    imagePath: '1668993834509-suco-de-laranja.png',
+    price: 10,
+    ingredients: [],
+    category: '637ac61dc4ffb95364c88b03',
+  },
+];

@@ -1,0 +1,10 @@
+{
+  "expo": {
+    "name": "waiterapp",
+    "slug": "waiterapp",
+    "version": "1.0.0",
+    "assetBundlePatterns": [
+      "**/*"
+    ]
+  }
+}

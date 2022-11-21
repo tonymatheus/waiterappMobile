@@ -1,0 +1,36 @@
+{
+  "name": "waiterapp",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "start": "expo start --dev-client",
+    "android": "expo run:android",
+    "ios": "expo run:ios",
+    "web": "expo start --web"
+  },
+  "dependencies": {
+    "@expo/webpack-config": "^0.17.2",
+    "expo": "~47.0.6",
+    "expo-cli": "^6.0.8",
+    "expo-font": "~11.0.1",
+    "expo-splash-screen": "~0.17.5",
+    "expo-status-bar": "~1.4.2",
+    "react": "18.1.0",
+    "react-native": "0.70.5",
+    "react-native-svg": "13.4.0",
+    "styled-components": "^5.3.6"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.12.9",
+    "@types/react": "~18.0.24",
+    "@types/styled-components": "^5.1.26",
+    "@types/styled-components-react-native": "^5.2.0",
+    "@typescript-eslint/eslint-plugin": "^5.43.0",
+    "@typescript-eslint/parser": "^5.43.0",
+    "eslint": "^8.28.0",
+    "eslint-plugin-react": "^7.31.11",
+    "ts-node": "^10.9.1",
+    "typescript": "^4.9.3"
+  },
+  "private": true
+}
