@@ -30,7 +30,7 @@ export const Main = () => {
       </Container>
 
       <Footer>
-        <Button  onPress={() => alert('test')}>Novo Pedido</Button>
+        <Button   onPress={() => alert('test')}>Novo Pedido</Button>
       </Footer>
     </>
   );
