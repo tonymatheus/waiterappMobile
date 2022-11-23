@@ -29,7 +29,7 @@ export const Separator = styled.View`
 `;
 
 export const AddToCartButton = styled.TouchableOpacity`
-  positions: absolute;
+  position: relative;
   right: 0;
   left: 0;
 `;
