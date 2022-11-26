@@ -18,6 +18,7 @@ export const TableModal = ({ visible, onClose, onSave }: TableModalProps) => {
   const handleSave = () => {
     onSave(table);
     onClose();
+    setTable('');
   };
 
   return (
