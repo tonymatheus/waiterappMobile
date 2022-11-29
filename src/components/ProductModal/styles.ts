@@ -24,7 +24,30 @@ export const ModalBody = styled.View`
 export const Header = styled.View``;
 
 export const IngredientsContainer = styled.View`
+  flex: 1;
   margin-top: 32px;
 `;
 
-export const Ingredient = styled.View``;
+export const Ingredient = styled.View`
+  align-items: center;
+  padding: 16px;
+  border-radius: 8px;
+  border: solid 1px rgba(204, 204, 204, 0.3);
+  flex-direction: row;
+  margin-bottom: 4px;
+`;
+
+export const Footer = styled.View`
+  min-height: 110px;
+  background: #fff;
+  padding: 16px 24px;
+`;
+export const FooterContainer = styled.View`
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+`;
+
+export const PriceContainer = styled.View``;
+
+export const ButtonContainer = styled.View``;
