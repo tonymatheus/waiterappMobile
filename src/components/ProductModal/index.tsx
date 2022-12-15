@@ -22,17 +22,25 @@ interface ProductModalProps {
   visible: boolean;
   onClose: () => void;
   product: null | Product;
+  onAddToCart: (product: Product) => void;
 }
 
 export const ProductModal = ({
   visible,
   onClose,
   product,
+  onAddToCart,
 }: ProductModalProps) => {
   console.log(product);
   if (!product) {
     return null;
   }
+
+  const handleAddToCart = () => {
+    onAddToCart(product!);
+    onClose();
+  };
+
   return (
     <Modal
       visible={visible}
@@ -89,7 +97,7 @@ export const ProductModal = ({
             </Text>
           </PriceContainer>
           <ButtonContainer>
-            <Button onPress={() => alert('funcionou')}>adicinar pedido</Button>
+            <Button onPress={handleAddToCart}>adicinar pedido</Button>
           </ButtonContainer>
         </FooterContainer>
       </Footer>
