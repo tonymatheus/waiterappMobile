@@ -1,15 +1,12 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import { Header } from '../components/Header';
 import { Text } from '../components/Text';
-import { ActivityIndicator, FlatList, View } from 'react-native';
-
-import { categories } from '../mocks/categories';
+import { ActivityIndicator } from 'react-native';
 
 import {
   CategoriesContainer,
   Container,
   Footer,
-  FooterContainer,
   CenteredContainer,
   MenuContainer,
 } from './styles';
@@ -20,15 +17,40 @@ import { TableModal } from '../components/TableModal';
 import { Cart } from '../components/Cart';
 import { CartItem } from '../types/CartItem';
 import { Product } from '../types/product';
-import { products as mockProducts } from '../mocks/products';
 import { Empty } from '../components/Icons/Empty';
+import { Category } from '../types/Category';
+import { api } from '../utils/api';
 
 export const Main = () => {
   const [isTableModalVisible, setIsTableModalVisible] = useState(false);
   const [selectedTable, setSelectedTable] = useState('');
   const [cartItems, setCartItems] = useState<CartItem[]>([]);
-  const [isLoading, setIsLoading] = useState(false);
-  const [products] = useState<Product[]>(mockProducts);
+  const [isLoading, setIsLoading] = useState(true);
+  const [isLoadingProducts, setIsLoadingProducts] = useState(false);
+  const [products, setProducts] = useState<Product[]>([]);
+  const [categories, setCategories] = useState<Category[]>([]);
+
+  useEffect(() => {
+    Promise.all([api.get('/categories'), api.get('/products')]).then(
+      ([categoriesResponse, productsResponse]) => {
+        setCategories(categoriesResponse.data);
+        setProducts(productsResponse.data);
+        setIsLoading(false);
+      }
+    );
+  }, []);
+
+  const handleselectCategory = async (categoryId: string) => {
+    const route = !categoryId
+      ? '/products'
+      : `/categories/${categoryId}/products`;
+
+    setIsLoadingProducts(true);
+
+    const { data } = await api.get(route);
+    setProducts(data);
+    setIsLoadingProducts(false);
+  };
 
   const handleAddToCart = (product: Product) => {
     if (!selectedTable) {
@@ -95,28 +117,38 @@ export const Main = () => {
           onCancelOrder={handleResetOrder}
         />
 
-        {isLoading && (
+        {isLoading ? (
           <CenteredContainer>
             <ActivityIndicator color="#d73035" size="large" />
           </CenteredContainer>
-        )}
-
-        {!isLoading && (
+        ) : (
           <>
             <CategoriesContainer>
-              <Categories />
+              <Categories
+                categories={categories}
+                onSelectCategory={handleselectCategory}
+              />
             </CategoriesContainer>
-            {products.length > 0 ? (
-              <MenuContainer>
-                <Menu onAddToCart={handleAddToCart} products={products} />
-              </MenuContainer>
-            ) : (
+
+            {isLoadingProducts ? (
               <CenteredContainer>
-                <Empty />
-                <Text color="#666" style={{ marginTop: 24 }}>
-                  Nehum produto foi encontrado
-                </Text>
+                <ActivityIndicator color="#d73035" size="large" />
               </CenteredContainer>
+            ) : (
+              <>
+                {products.length > 0 ? (
+                  <MenuContainer>
+                    <Menu onAddToCart={handleAddToCart} products={products} />
+                  </MenuContainer>
+                ) : (
+                  <CenteredContainer>
+                    <Empty />
+                    <Text color="#666" style={{ marginTop: 24 }}>
+                      Nehum produto foi encontrado
+                    </Text>
+                  </CenteredContainer>
+                )}
+              </>
             )}
           </>
         )}
@@ -136,6 +168,7 @@ export const Main = () => {
           <Cart
             cartItems={cartItems}
             onAdd={handleAddToCart}
+            selectedTable={selectedTable}
             onDecrement={handleDecrementItem}
             onConfirmOrder={handleResetOrder}
           />
