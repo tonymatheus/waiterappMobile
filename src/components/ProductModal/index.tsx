@@ -31,7 +31,6 @@ export const ProductModal = ({
   product,
   onAddToCart,
 }: ProductModalProps) => {
-  console.log(product);
   if (!product) {
     return null;
   }
