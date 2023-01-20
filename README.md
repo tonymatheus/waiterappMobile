@@ -39,8 +39,7 @@ após executar o comando acima irá abrir o termial do expo para rodar o app no 
 
 ## Tecnologias utilizadas no desenvolvimento do projeto
 
-- [x] Typescriot![Simulator Screen Shot - iPhone 14 Pro - 2023-01-18 at 16 11 17](https://user-images.githubusercontent.com/43850888/213608849-ad495aad-99b3-45f0-b700-cb79f37103c6.jpg)
-
+- [x] Typescriot
 - [x] React-native
 - [x] React-Hooks
 - [x] Expo-Bareworkflow
