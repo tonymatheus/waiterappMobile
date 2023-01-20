@@ -40,7 +40,7 @@ export const Main = () => {
     );
   }, []);
 
-  const handleselectCategory = async (categoryId: string) => {
+  const handleSelectCategory = async (categoryId: string) => {
     const route = !categoryId
       ? '/products'
       : `/categories/${categoryId}/products`;
@@ -126,7 +126,7 @@ export const Main = () => {
             <CategoriesContainer>
               <Categories
                 categories={categories}
-                onSelectCategory={handleselectCategory}
+                onSelectCategory={handleSelectCategory}
               />
             </CategoriesContainer>
 
