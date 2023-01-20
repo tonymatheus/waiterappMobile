@@ -39,10 +39,26 @@ após executar o comando acima irá abrir o termial do expo para rodar o app no 
 
 ## Tecnologias utilizadas no desenvolvimento do projeto
 
-- [x] Typescriot
+- [x] Typescriot![Simulator Screen Shot - iPhone 14 Pro - 2023-01-18 at 16 11 17](https://user-images.githubusercontent.com/43850888/213608849-ad495aad-99b3-45f0-b700-cb79f37103c6.jpg)
+
 - [x] React-native
 - [x] React-Hooks
 - [x] Expo-Bareworkflow
 - [x] Styled-Components
 - [x] Eslint
 - [x] Axios
+
+## Aplicação funcionando 
+
+![Simulator Screen Shot - iPhone 14 Pro - 2023-01-18 at 16 10 31](https://user-images.githubusercontent.com/43850888/213608570-084085a5-a040-41b6-975e-c6799adafbd4.jpg)
+![Simulator Screen Shot - iPhone 14 Pro - 2023-01-18 at 16 10 19](https://user-images.githubusercontent.com/43850888/213608582-6c87a7a8-9738-4e2e-ab8a-f96b9350678d.jpg)
+![Simulator Screen Shot - iPhone 14 Pro - 2023-01-18 at 16 10 47](https://user-images.githubusercontent.com/43850888/213608747-910191ec-b231-4f1e-a102-a7a00c96ceb1.jpg)
+
+![Simulator Screen Shot - iPhone 14 Pro - 2023-01-18 at 16 11 04](https://user-images.githubusercontent.com/43850888/213608829-bb96b7ae-de74-44ce-b922-7169f08b1e77.jpg)
+![Simulator Screen Shot - iPhone 14 Pro - 2023-01-18 at 16 10 57](https://user-images.githubusercontent.com/43850888/213608831-45889052-c314-4fb6-ad37-a3a083f9cbc8.jpg)
+
+![Simulator Screen Shot - iPhone 14 Pro - 2023-01-18 at 16 11 17](https://user-images.githubusercontent.com/43850888/213608883-bd9579ee-00c7-43ee-96b1-7899045c04cd.jpg)
+![Simulator Screen Shot - iPhone 14 Pro - 2023-01-18 at 16 10 40](https://user-images.githubusercontent.com/43850888/213608899-d0ed33c0-9548-4e41-8874-4b2c1e3f9707.jpg)
+
+
+
