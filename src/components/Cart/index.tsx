@@ -38,6 +38,7 @@ export const Cart = ({
   const [isLoading, setIsLoading] = useState(false);
 
   const desableCartItemButton = cartItems.length === 0;
+
   const total = cartItems.reduce((accumulator, carItem) => {
     return accumulator + carItem.quantity * carItem.product.price;
   }, 0);

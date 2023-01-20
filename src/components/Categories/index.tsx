@@ -14,7 +14,7 @@ export const Categories = ({
 }: CategoriesProps) => {
   const [selectedCategory, setSelectedCategory] = useState('');
 
-  const handleSelectCategory = (categoryId: string) => {  
+  const handleSelectCategory = (categoryId: string) => {
     const category = selectedCategory === categoryId ? '' : categoryId;
     onSelectCategory(category);
     setSelectedCategory(category);
@@ -23,7 +23,7 @@ export const Categories = ({
   return (
     <Container>
       <FlatList
-        contentContainerStyle={{
+        contentContainerStyle={{  
           padding: 24,
         }}
         horizontal={true}
